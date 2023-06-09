@@ -1,0 +1,29 @@
+<%- include('../partials/header.ejs') %>
+<div id="form-container">
+    <h2>Edit Event</h2>
+    <form id="newUserCon" name="newUserCon" action="/connections/<%= event.id%>?_method=PUT" method="POST">
+        <section id="labels">
+            <label for="category">Category</label><br>
+            <label for="title">Title</label><br>
+            <label for="details">Details</label><br><br>
+            <label for="address">Address</label><br>
+            <label for="date">Date</label><br>
+            <label for="startTime">Start</label><br>
+            <label for="endTime">End</label><br>
+        </section>
+        <section id="inputs">
+            <select name="category" id="category" form="newUserCon" value="<%= event.category%>" required>
+                <option value="kpop">K-POP Fandom</option>
+                <option value="lang">Language Study</option>
+            </select><br>
+            <input type="text" name="title" id="title" value="<%= event.title%>" required><br>
+            <textarea id="details" name="details" required minLength="10"><%= event.details%></textarea><br>
+            <input id="address" type="text" name="address" value="<%= event.address%>" required><br>
+            <input type="date" id="date" name="date" value="<%= event.date%>" required><br>
+            <input type="time" id="start" name="start" value="<%= event.start%>" required><br>
+            <input type="time" id="end" name="end" value="<%= event.end%>" required><br>
+            <input type="submit" id="submitForm">
+        </section>
+    </form>
+</div>
+<%- include('../partials/footer.ejs') %>

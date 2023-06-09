@@ -1,0 +1,37 @@
+<%- include('../partials/header.ejs') %>
+<section id="detailsContainer">
+    <div id="eventDetails">
+        <aside id="detailsP1">
+            <img src="<%= event.src %>" alt="category indicator" id="categoryIndicator">
+            <div id="eventButtons">
+                <%if(user == event.host._id) {%>
+                    <form>
+                        <input type="submit" class="connectionButtons" id="updateButton" formmethod="GET" formaction="/connections/<%= event.id%>/edit" value="Update">
+                        <input type="submit" class="connectionButtons" id="removeButton" formmethod="POST" formaction="/connections/<%= event.id%>?_method=DELETE" value="Delete">
+                    </form>
+                <%}%>
+            </div>
+            <%if(user !== event.host._id) {%>
+                <div id="rsvp">
+                    <div id="eventButtons">
+                            <form>
+                                <input type="submit" class="connectionButtons" id="attendance" formmethod="POST" formaction="/connections/<%= event.id%>/rsvp" name="attendance"value="YES">
+                                <input type="submit" class="connectionButtons" id="attendance" formmethod="POST" formaction="/connections/<%= event.id%>/rsvp" name="attendance" value="MAYBE">
+                                <input type="submit" class="connectionButtons" id="attendance" formmethod="POST" formaction="/connections/<%= event.id%>/rsvp" name="attendance" value="NO">
+                            </form>
+                    </div>
+                </div>
+            <%}%>
+        </aside>
+        <section id="detailsP2">
+            <h3><%= event.title%></h3>
+            <p><strong><%= event.host.username %></strong></p>
+            <p><strong><%= event.date%></strong></p>
+            <p><strong><%= event.address%></strong></p>
+            <p><strong>Start: <%= event.start%> | End: <%= event.end%></strong></p>
+            <p><%= event.details%></p>
+            <p><b><%=count%> have RSVP'd</b></p>
+        </section>
+    </div>
+</section>
+<%- include('../partials/footer.ejs') %>

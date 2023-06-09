@@ -1,0 +1,46 @@
+<%- include('../partials/header.ejs') %>
+<div id="aboutImg">
+    <div class="gen-div">
+    <h1>Welcome, <%= user.username%></h1>
+    <%if(events.length) {%>
+        <p>You have created these events</p>
+        <div id="userEvents">
+            <table>
+                <tr>
+                    <td><b>Event</b></td>
+                    <td><b>Category</b></td>
+                    <td><b>Actions</b></td>
+                </tr>
+            <%events.forEach(event => {%>
+                <tr>
+                    <td><a href = '/connections/<%=event.id%>'><p><%=event.title%></p></a></td>
+                    <td><p><%=event.category%></p></a></td>
+                    <td><form><input type="submit" class="tableButtons" id="updateButton" formmethod="GET" formaction="/connections/<%= event.id%>/edit" value="Update"> <input type="submit" class="tableButtons" id="removeButton" formmethod="POST" formaction="/connections/<%= event.id%>?_method=DELETE" value="Delete"></form></td>
+                </tr>
+            <%})%>
+            </table><br>
+    <%} else {%>
+        <p>You have not created any events</p>
+    <%}%>
+    <%if (rsvp.length) {%>
+        <p>You have RSVP'd to these events</p>
+        
+        <table>
+            <tr>
+                <td><b>Event</b></td>
+                <td><b>Category</b></td>
+                <td><b>Actions</b></td>
+            </tr>
+            <%rsvp.forEach(rsvp => {%>
+            <tr>
+                <td><a href="/connections/<%=rsvp.event.id%>"><p><%=rsvp.event.title%></p></a></td>
+                <td><p><%=rsvp.event.category%></p></a></td>
+                <td><p><%=rsvp.attendance%></p></td>
+            </tr>
+            <%})%>
+        </table>
+    <%}%>
+        </div>
+    </div>
+</div>
+<%- include('../partials/footer.ejs') %>

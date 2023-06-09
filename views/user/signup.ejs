@@ -1,0 +1,22 @@
+<%- include('../partials/header.ejs') %>
+<div id="form-container">
+    <h2>Sign Up</h2>
+    <form id="newUserCon" method="POST" action="/user/signup">
+        <section id="labels">
+            <label for="firstName">First Name</label><br>
+            <label for="lastName">Last Name</label><br>
+            <label for="username">Username</label><br>
+            <label for="email">Email</label><br>
+            <label for="password">Password</label><br>
+        </section>
+        <section id="inputs">
+            <input type="text" id="firstName" name="firstName" required><br>
+            <input type="text" id="lastName" name="lastName" required><br>
+            <input type="text" id="username" name="username" required><br>
+            <input type="email" id="email" name="email" required><br>
+            <input type="password" id="password" name="password" required minlength="8" maxlength="64"><br>
+            <input type="submit" id="submitForm">
+        </section>
+    </form>
+</div>
+<%- include('../partials/footer.ejs') %>

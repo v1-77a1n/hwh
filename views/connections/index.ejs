@@ -1,0 +1,28 @@
+<%- include('../partials/header.ejs') %>
+<div id="eventContainer">
+    <div id="kpop">
+        <h3>K-POP</h3>
+        <%if(events.length) {%> 
+            <%events.forEach((event)=>{%>
+                <%if(event.category === "kpop") {%>
+                    <a href = "/connections/<%= event.id%>"><p><%= event.title%></p></a>
+                    <%}%>
+                <%});%>
+        <%} else {%>
+            <p>There are no events to display</p>
+        <%}%>
+    </div>
+    <div id="language">
+        <h3>Language Study</h3>
+        <%if(events.length) {%> 
+            <%events.forEach((event)=>{%>
+                <%if(event.category === "lang") {%>
+                    <a href = "/connections/<%= event.id%>"><p><%= event.title%></p></a>
+                    <%}%>
+                <%});%>
+        <%} else {%>
+            <p>There are no events to display</p>
+        <%}%>
+    </div>
+</div>
+<%- include('../partials/footer.ejs') %>

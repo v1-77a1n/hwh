@@ -1,0 +1,18 @@
+<%- include('../partials/header.ejs') %>
+<div id="form-container">
+    <h2>Change Username</h2>
+    <form id="newUserCon" method="POST" action="/user/forgot_username">
+        <section id="labels">
+            <label for="username">Username</label><br><br>
+            <label for="email">Email</label><br>
+            <label for="password">Password</label><br>
+        </section>
+        <section id="inputs">
+            <input type="text" id="username" name="username" required><br><br>
+            <input type="text" id="email" name="email"><br>
+            <input type="password" id="password" name="password" minlength="8" maxlength="64" required><br>
+            <input type="submit" id="submitForm">
+        </section>
+    </form>
+</div>
+<%- include('../partials/footer.ejs') %>

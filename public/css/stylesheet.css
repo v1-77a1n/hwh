@@ -1,0 +1,270 @@
+header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 10%;
+    padding: 30px;
+    background-color: #a7f0ff;
+    font-family: Candara, sans-serif;
+}
+
+#logo {
+    height: 100px;
+    width: 100px;
+}
+
+#siteNavContainer {
+    background-color: white;
+    width: auto;
+    height: 100px;
+    border: solid 2px black;
+}
+
+#site-nav {
+    float: left;
+    align-items: center;
+    margin: 20px 20px 0 20px;
+}
+#site-nav input[type=button] {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 10px;
+    background-color: white;
+
+}
+
+#welcomeImg {
+    height: 625px;
+    width: 100%;
+    background-image: url("../images/homeC1.png");
+}
+
+#userNav {
+    float: right;
+    align-items: center;
+    padding-top: 80px;
+}
+
+#userNav input[type=button] {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 10px;
+    background-color: white;
+}
+
+#form-container {
+    width: 100%;
+    background-image: url("../images/groupShot.png");
+    background-position: top;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    gap: 30px;
+    color: white;
+    height: 500px;
+}
+
+#form-container h2 {
+    text-align: center;
+    padding-top: 50px;
+    margin-top: 0;
+    margin-bottom: 40px;
+    color: white;
+}
+
+#labels {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    float: left;
+}
+
+#inputs {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    float: right;
+}
+
+form input {
+    color: black;
+}
+
+form select {
+    color: black;
+}
+
+form input[type=submit] {
+    color: black;
+}
+
+footer {
+    width: 100%;
+    height: 10%;
+    padding: 30px;
+    background-color: #a7f0ff;
+}
+
+#eventContainer {
+    background-image: url("../images/clubMeeting.png");
+    width: 100%;
+    height: 625px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#eventContainer div {
+    background-color: white;
+    text-align: center;
+    width: 300px;
+    height: 500px;
+    margin-top: 50px;
+    border: 2px black solid;
+    opacity: 85%;
+}
+
+#eventContainer h3 {
+    border-bottom: 2px solid black;
+    padding: 30px;
+    margin-top: 0;
+}
+
+
+
+#detailsContainer {
+    background-image: url('../images/clubMeeting.png');
+    width: 100%;
+    height: 625px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow-y: hidden;
+}
+
+#eventDetails {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px;
+    margin-left: 3%;
+    width: 50%;
+    margin-top: 100px;
+    border: black solid 2px;
+    background-color: white;
+    opacity: 85%;
+    height: 400px;
+}
+
+#eventButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.connectionButtons {
+    background-color: white;
+}
+
+#categoryIndicator {
+    width: 50%;
+    height: auto;
+}
+
+
+#detailsP2 {
+    width: 50%;
+}
+
+footer {
+    margin: 0;
+    width: 100%;
+}
+
+/*For error page and misc adjustments */
+.error {
+    text-align: center;
+    margin: 50px;
+    height: 625px;
+}
+
+.about {
+    text-align: center;
+    margin: 50px;
+    height: 625px;
+}
+
+#details {
+    color: black;
+}
+
+#aboutImg {
+    width: 100%;
+    height: 625px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-image: url("../images/about.png");
+}
+
+#contactImg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 625px;
+    width: 100%;
+    background-image: url("../images/contact.png")
+}
+
+.gen-div {
+    background-color: white;
+    text-align: center;
+    width: 600px;
+    height: auto;
+    margin-top: 50px;
+    border: 2px black solid;
+    opacity: 85%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px; 
+}
+
+#errorHeader {
+    width: auto;
+    height: auto
+}
+
+.success {
+    background: green;
+    color: #fff;
+    width: 85;
+    text-align: center;
+    height: 30px;
+  }
+  
+  .error {
+    background: red;
+    color: #fff;
+    width: auto;
+    text-align: center;
+    height: 30px;
+  }
+
+table, th, td {
+    border: 1px solid black;
+    width: auto;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table form {
+    height: auto;
+    width: auto;
+}

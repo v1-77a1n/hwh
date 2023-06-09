@@ -1,0 +1,29 @@
+<%- include('../partials/header.ejs') %>
+<div id="form-container">
+    <h2>Create a New Event</h2>
+    <form id="newUserCon" method="POST" action="/connections">
+        <section id="labels">
+            <label for="category">Category</label><br>
+            <label for="title">Title</label><br>
+            <label for="details">Details</label><br><br>
+            <label for="address">Address</label><br>
+            <label for="date">Date</label><br>
+            <label for="startTime">Start</label><br>
+            <label for="endTime">End</label><br>
+        </section>
+        <section id="inputs">
+            <select name="category" id="category" required>
+                <option value="kpop">K-POP Fandom</option>
+                <option value="lang">Language Study</option>
+            </select><br>
+            <input type="text" name="title" id="title" required><br>
+            <textarea name="details" id="details" required minLength="10"></textarea><br>
+            <input type="text" name="address" id="address" placeholder="Enter an address" required><br>
+            <input type="date" name="date" id="date" required><br>
+            <input type="time" name="start" id="start" required><br>
+            <input type="time" name="end" id="end" required><br>
+            <input type="submit" id="submitForm">
+        </section>
+    </form>
+</div>
+<%- include('../partials/footer.ejs') %>

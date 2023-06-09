@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/css/stylesheet.css">
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <script src="/javascript/script.js"></script>
+        <title>Hallyu Wave Hub</title>
+    </head>
+    <body>
+    <header>
+        <a href="/"><img id="logo" src="/images/logo.png" alt="site-logo"></a><nav id="userNav"><a href="/connections/new"><input type="button" id="newCon" value="Start a New Connection"></a> <%if(!user) {%>&#9734; <a href="/user/login"><input type="button" id="login" value="Log In"></a> &#9734; <a href="/user/signup"><input type="button" id="signUp" value="Sign Up"></a> <%} else {%> &#9734; <a href="/user/profile"><input type="button" id="profile" value="Profile"></a> &#9734; <a href="/user/logout"><input type="button" id="logout" value="Logout"></a><%}%></nav>
+    </header>
+    <section id="siteNavContainer">
+        <nav id="site-nav"><a href="/"><input type="button" id="home" value="Home"><a href="/connections"><input type="button" id="viewCon" value="Connections"></a></a></nav>
+    </section>
+    <section id="errorHeader">
+<% if(errorMessages.length > 0) {%>
+    <% errorMessages.forEach(message=>{%>
+        <div class='error'>
+             <%=message%>
+        </div>
+    <%});%>
+<%}%>
+        
+<% if(successMessages.length > 0) {%>
+        
+    <% successMessages.forEach(message=>{%>
+        <div class='success'>
+            <%=message%>
+        </div>
+    <%});%>
+<%}%>
+    </section>
